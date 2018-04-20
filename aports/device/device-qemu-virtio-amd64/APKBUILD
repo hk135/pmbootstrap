@@ -1,0 +1,22 @@
+# Reference: <https://postmarketos.org/devicepkg>
+pkgname="device-qemu-virtio-amd64"
+pkgdesc="Qemu amd64"
+pkgver=0.1
+pkgrel=0
+url="https://postmarketos.org"
+license="MIT"
+arch="noarch"
+options="!check"
+depends="postmarketos-base linux-qemu-virtio-amd64 mesa-dri-swrast"
+makedepends="devicepkg-dev"
+source="deviceinfo"
+
+build() {
+	devicepkg_build $startdir $pkgname
+}
+
+package() {
+	devicepkg_package $startdir $pkgname
+}
+
+sha512sums="dab31ddd8b321f464f25d4766c1339b9a1356180c0b245421ca83241eaee891ea25c459dd7d4f0cc695cf2c52a7ae1bd8eac0f60967dffb907f033618426d298  deviceinfo"
