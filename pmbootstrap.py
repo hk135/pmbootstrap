@@ -23,4 +23,9 @@ import sys
 import pmb
 
 if __name__ == "__main__":
-    sys.exit(pmb.main())
+    print("ERROR: pmbootstrap upstream has moved to:"
+          " <https://postmarketos.org/move.html#/pmbootstrap>")
+    print("Please do a fresh clone of the code or update your git config"
+          " as described here: <https://postmarketos.org/git>")
+    print("Sorry for the inconvenience.")
+    sys.exit(1)
